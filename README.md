@@ -209,15 +209,59 @@ The Swagger interface allows you to submit prediction requests and inspect API r
 
 Checks application health and whether both model objects are loaded.
 
-Example response:
+
+#### Example Request
+
+**Method:** `POST`
+
+**Endpoint:** `/predict`
+
+**Content-Type:** `application/json`
+
+Send the following JSON body to `http://127.0.0.1:8000/predict` when the API is running locally:
 
 ```json
 {
-  "status": "healthy",
-  "eta_model_loaded": true,
-  "classifier_loaded": true
+  "Delivery_person_Age": 36.0,
+  "Delivery_person_Ratings": 4.0,
+  "Restaurant_latitude": 22.74806,
+  "Restaurant_longitude": 75.8934,
+  "Delivery_location_latitude": 22.80806,
+  "Delivery_location_longitude": 75.9534,
+  "distance_km": 9.074744674241003,
+  "distance_bands": "long",
+  "pickup_hour": 21,
+  "pickup_minute": 59,
+  "pickup_day_of_week": 3,
+  "pickup_is_weekend": 0,
+  "pickup_time_period": "night",
+  "pickup_hour_sin": -0.7071067811865477,
+  "pickup_hour_cos": 0.7071067811865474,
+  "is_peak_pickup": 1,
+  "Weatherconditions": "Sandstorms",
+  "Road_traffic_density": "Jam",
+  "Vehicle_condition": 0,
+  "Type_of_order": "Drinks",
+  "Type_of_vehicle": "motorcycle",
+  "multiple_deliveries": 0,
+  "Festival": "No",
+  "City": "Metropolitian"
 }
 ```
+
+#### Example Response
+
+```json
+{
+  "predicted_eta_minutes": 37.5857315063,
+  "late_probability": 0.9978383183,
+  "risk_level": "High Risk",
+  "recommendation": "Prioritize intervention"
+}
+```
+
+*The example values are from a previously tested validation example. Predictions may vary for other input data or model versions.*
+
 
 ### Delivery Prediction
 
