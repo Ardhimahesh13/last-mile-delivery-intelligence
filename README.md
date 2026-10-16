@@ -143,6 +143,7 @@ Last-mile-Delivery-Intillegence/
 │   └── 04_baseline_model.ipynb
 ├── tests/
 │   └── test_app.py
+├── streamlit_app.py
 ├── .gitignore
 ├── README.md
 └── requirements.txt
