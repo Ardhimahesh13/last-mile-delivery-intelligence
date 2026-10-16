@@ -340,9 +340,9 @@ This project combines machine learning, model evaluation, model persistence, API
 
 <img width="1907" height="732" alt="image" src="https://github.com/user-attachments/assets/b35cea94-7f6f-4263-82c4-8b9459d245fa" />
 
-## Render API documentation URL
-- Link : https://last-mile-delivery-intelligence.onrender.com
+## 🚀 Live Demo
 
-## deployed Streamlit app URL
-- Link : https://last-mile-delivery-intelligence-uga9cbj5lkiuxgxbhgesrl.streamlit.app/
+- **[Launch Live App](https://last-mile-delivery-intelligence-uga9cbj5lkiuxgxbhgesrl.streamlit.app/)**
+- **[API Documentation](https://last-mile-delivery-intelligence.onrender.com/docs)**
+- [API Health Check](https://last-mile-delivery-intelligence.onrender.com/health)
 
