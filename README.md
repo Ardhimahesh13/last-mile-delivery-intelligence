@@ -334,3 +334,9 @@ Feature importance and local explanations can help examine model behavior, but t
 ## Project Summary
 
 This project combines machine learning, model evaluation, model persistence, API development, input validation, and automated testing into an end-to-end delivery intelligence workflow.
+
+
+## Screenshots
+
+<img width="1907" height="732" alt="image" src="https://github.com/user-attachments/assets/b35cea94-7f6f-4263-82c4-8b9459d245fa" />
+
