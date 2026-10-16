@@ -101,6 +101,33 @@ The API expects the feature values required by the trained pipelines. It does no
 - Pytest
 - Jupyter Notebook
 
+## System Architecture
+
+```mermaid
+flowchart TD
+    A["Client / API Consumer"] -->|"POST /predict · JSON"| B["FastAPI Application"]
+    B --> C["Pydantic Input Validation"]
+    C --> D["Validated Feature DataFrame"]
+    D --> E["XGBoost ETA Regression Pipeline"]
+    D --> F["XGBoost Late-Delivery Classifier"]
+    E --> G["Predicted ETA in Minutes"]
+    F --> H["Late-Delivery Probability"]
+    H --> I["Risk Categorization and Recommendation"]
+    G --> J["JSON Prediction Response"]
+    I --> J
+    J --> A
+
+    K["GET /health"] --> B
+    L["Saved Joblib Model Artifacts"] --> E
+    L --> F
+```
+
+The FastAPI application loads both trained model pipelines from the
+`models/` directory at startup. For prediction requests, it validates
+the engineered input features, generates the ETA and late-delivery
+probability, and returns a JSON response containing the predictions,
+risk level, and recommendation.
+
 ## Project Structure
 
 ```text
