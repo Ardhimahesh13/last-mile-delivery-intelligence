@@ -129,22 +129,27 @@ probability, and returns a JSON response containing the predictions,
 risk level, and recommendation.
 
 ## Project Structure
-
 ```text
-ML_Project1/
+Last-mile-Delivery-Intillegence/
 ├── api/
 │   └── app.py
 ├── models/
 │   ├── eta_model.joblib
 │   └── late_delivery_classifier.joblib
+├── notebooks/
+│   ├── 01_data_understanding.ipynb
+│   ├── 02_data_preparation.ipynb
+│   ├── 03_train_validation_test_strategy.ipynb
+│   └── 04_baseline_model.ipynb
 ├── tests/
 │   └── test_app.py
-├── notebooks/
-│   └── model development notebooks
-├── requirements.txt
 ├── .gitignore
-└── README.md
+├── README.md
+└── requirements.txt
 ```
+
+**Dataset note:** Raw and processed datasets are stored locally under `Data/` and excluded from Git using `.gitignore`.
+
 
 The notebook folder name and contents should reflect the actual files in your repository.
 
