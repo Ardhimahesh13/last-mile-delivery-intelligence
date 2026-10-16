@@ -10,7 +10,7 @@ import streamlit as st
 # 1. FastAPI backend endpoint
 # --------------------------------------------------
 
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = "https://last-mile-delivery-intelligence.onrender.com/predict"
 
 
 # --------------------------------------------------
